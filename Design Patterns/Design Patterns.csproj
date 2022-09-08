@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Strategy Pattern\" />
-    <Folder Include="Observer Pattern\" />
   </ItemGroup>
 
 </Project>

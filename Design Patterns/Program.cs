@@ -2,12 +2,13 @@
 using System;
 internal class Program
 {
-
+    //     ------------------------------Singleton------------------------------
     public static void TestSingleton(string value)
     {
         Singleton singleton = Singleton.GetInstance(value);
         Console.WriteLine(singleton.Value);
     }
+    //     ------------------------------Singleton------------------------------
     private static void Main(string[] args)
     {
         //     ------------------------------Singleton------------------------------
@@ -34,5 +35,9 @@ internal class Program
 
         firstProcess.Join();
         secondProcess.Join();
+        //     ------------------------------Singleton------------------------------
+        //the key to a singleton, is the fact that whilst the constructor is private (it cant be called in the main)
+        //being the constructor static, a variable of singleton type is created in the clas, and then used to call the singleton.
+        //     ------------------------------Singleton------------------------------
     }
 }
