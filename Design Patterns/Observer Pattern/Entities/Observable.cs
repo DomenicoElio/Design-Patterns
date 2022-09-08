@@ -9,7 +9,7 @@ namespace Design_Patterns.Observer_Pattern.Entities
 {
     public class Observable : IObservable
     {
-        public int Sate { get; set; } = -0;
+        public int State { get; set; } = -0;
         // sets the default status and defines the get and set methods
 
         public List <IObserver> _observers = new List<IObserver> ();
@@ -32,7 +32,7 @@ namespace Design_Patterns.Observer_Pattern.Entities
 
         public void BusinessLogic() {
             Console.WriteLine("Simulating an important operation being executed (weather update on screen)");
-            this.Sate = new Random().Next(0,5); //updates the state of the thread
+            this.State = new Random().Next(0,5); //updates the state of the thread
 
             Thread.Sleep(15); //forces the thread to wait 15 milliseconds before reading the updated state
 

@@ -1,17 +1,19 @@
-﻿using Design_Patterns.Singleton_Pattern;
+﻿using Design_Patterns.Observer_Pattern.Entities;
+using Design_Patterns.Observer_Pattern.Interfaces;
+using Design_Patterns.Singleton_Pattern;
 using System;
 internal class Program
 {
-    //     ------------------------------Singleton------------------------------
+    /*//     ------------------------------Singleton------------------------------
     public static void TestSingleton(string value)
     {
         Singleton singleton = Singleton.GetInstance(value);
         Console.WriteLine(singleton.Value);
     }
-    //     ------------------------------Singleton------------------------------
+    //     ------------------------------Singleton------------------------------*/
     private static void Main(string[] args)
     {
-        //     ------------------------------Singleton------------------------------
+        /*//     ------------------------------Singleton------------------------------
 
         Console.WriteLine(
             "{0}\n{1}\n\n{2}\n",
@@ -38,6 +40,25 @@ internal class Program
         //     ------------------------------Singleton------------------------------
         //the key to a singleton, is the fact that whilst the constructor is private (it cant be called in the main)
         //being the constructor static, a variable of singleton type is created in the clas, and then used to call the singleton.
-        //     ------------------------------Singleton------------------------------
+        //     ------------------------------Singleton------------------------------*/
+
+        //     ----------------------------------------------------------------------------
+        //     ------------------------------Observer Pattern------------------------------
+
+        Observable subject = new Observable();
+        ConcreteObserverA firstObserver = new ConcreteObserverA();
+        subject.Attach(firstObserver);
+
+        ConcreteObserverB secondObserver = new ConcreteObserverB();
+        subject.Attach(secondObserver);
+
+        subject.BusinessLogic();
+        subject.BusinessLogic();
+
+        subject.Detach(secondObserver);
+        subject.BusinessLogic();
+
+        //     ----------------------------------------------------------------------------
+        //     ------------------------------Observer Pattern------------------------------
     }
 }

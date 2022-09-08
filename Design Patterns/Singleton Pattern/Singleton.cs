@@ -8,7 +8,7 @@ namespace Design_Patterns.Singleton_Pattern
 {
     class Singleton
     {
-        private Singleton() { }
+        /*private Singleton() { }
 
         private static Singleton _instance;
 
@@ -43,7 +43,7 @@ namespace Design_Patterns.Singleton_Pattern
             }
             return _instance;
         }
-        public string Value { get; set; }
+        public string Value { get; set; }*/
     }
 
 }
