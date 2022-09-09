@@ -8,5 +8,6 @@ namespace Design_Patterns.Strategy_Pattern.Interfaces
 {
     public interface IStrategy
     {
+        object Algorithm(object data);
     }
 }
