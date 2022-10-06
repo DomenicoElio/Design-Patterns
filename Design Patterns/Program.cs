@@ -1,6 +1,8 @@
 ﻿using Design_Patterns.Observer_Pattern.Entities;
 using Design_Patterns.Observer_Pattern.Interfaces;
 using Design_Patterns.Singleton_Pattern;
+using Design_Patterns.Strategy_Pattern.Entities;
+using Design_Patterns.Strategy_Pattern.Interfaces;
 using System;
 internal class Program
 {
@@ -42,7 +44,7 @@ internal class Program
         //being the constructor static, a variable of singleton type is created in the clas, and then used to call the singleton.
         //     ------------------------------Singleton------------------------------*/
 
-        //     ------------------------------Observer Pattern------------------------------
+        /* //     ------------------------------Observer Pattern------------------------------
 
         Observable subject = new Observable();
         ConcreteObserverA firstObserver = new ConcreteObserverA();
@@ -56,10 +58,21 @@ internal class Program
 
         subject.Detach(secondObserver);
         subject.BusinessLogic();
-        //     ------------------------------Observer Pattern------------------------------
+        //     ------------------------------Observer Pattern------------------------------ */
 
         //     ------------------------------Strategy Pattern------------------------------
 
+        var context = new Context();
+
+        Console.WriteLine("Your algorythm will reverse sort any imput");
+        context.SetStrategy(new ConcreteStrategyA());
+        context.BusinessFunction();
+
+        Console.WriteLine();
+
+        Console.WriteLine("Your algorythm will reverse sort any imput");
+        context.SetStrategy(new ConcreteStrategyB());
+        context.BusinessFunction();
 
 
         //     ------------------------------Strategy Pattern------------------------------
