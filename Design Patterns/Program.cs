@@ -42,7 +42,6 @@ internal class Program
         //being the constructor static, a variable of singleton type is created in the clas, and then used to call the singleton.
         //     ------------------------------Singleton------------------------------*/
 
-        //     ----------------------------------------------------------------------------
         //     ------------------------------Observer Pattern------------------------------
 
         Observable subject = new Observable();
@@ -57,8 +56,12 @@ internal class Program
 
         subject.Detach(secondObserver);
         subject.BusinessLogic();
-
-        //     ----------------------------------------------------------------------------
         //     ------------------------------Observer Pattern------------------------------
+
+        //     ------------------------------Strategy Pattern------------------------------
+
+
+
+        //     ------------------------------Strategy Pattern------------------------------
     }
 }
